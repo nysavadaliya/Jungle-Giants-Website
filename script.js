@@ -1,25 +1,21 @@
-// ── FIREFLIES ──
-function spawnFireflies() {
-  const container = document.getElementById('fireflies');
-  if (!container) return;
-
-  for (let i = 0; i < 22; i++) {
-    const el = document.createElement('div');
-    el.className = 'firefly';
-    el.style.cssText = `
-      left: ${Math.random() * 100}%;
-      top: ${Math.random() * 100}%;
-      --dur: ${4 + Math.random() * 6}s;
-      --delay: ${Math.random() * 5}s;
-      --dx: ${(Math.random() - 0.5) * 80}px;
-      --dy: ${(Math.random() - 0.5) * 80}px;
-    `;
-    container.appendChild(el);
+// Generate embers
+  const embersContainer = document.getElementById('embers');
+  const emberCount = 25;
+  for (let i = 0; i < emberCount; i++) {
+    const e = document.createElement('div');
+    e.className = 'ember';
+    e.style.setProperty('--x', Math.random() * 100 + '%');
+    e.style.setProperty('--dur', (4 + Math.random() * 6) + 's');
+    e.style.setProperty('--delay', (Math.random() * 8) + 's');
+    e.style.setProperty('--drift', (Math.random() * 80 - 40) + 'px');
+    const hue = Math.random() > 0.5 ? '#EF9F27' : '#E24B4A';
+    e.style.background = hue;
+    e.style.width = (2 + Math.random() * 3) + 'px';
+    e.style.height = e.style.width;
+    embersContainer.appendChild(e);
   }
-}
-
-// ── SCROLL REVEAL ──
-function initScrollReveal() {
+ 
+  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -27,23 +23,20 @@ function initScrollReveal() {
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.1 });
-
+  }, { threshold: 0.12 });
+ 
   reveals.forEach(el => observer.observe(el));
-}
-
-// ── SMOOTH SCROLL CTA ──
-function initCTA() {
-  const btn = document.getElementById('discover-btn');
-  if (!btn) return;
-  btn.addEventListener('click', () => {
-    document.getElementById('story').scrollIntoView({ behavior: 'smooth' });
+ 
+  // Smooth nav hide/show
+  let lastY = 0;
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y > lastY && y > 80) {
+      nav.style.transform = 'translateY(-100%)';
+      nav.style.transition = 'transform 0.3s';
+    } else {
+      nav.style.transform = 'translateY(0)';
+    }
+    lastY = y;
   });
-}
-
-// ── INIT ──
-document.addEventListener('DOMContentLoaded', () => {
-  spawnFireflies();
-  initScrollReveal();
-  initCTA();
-});
