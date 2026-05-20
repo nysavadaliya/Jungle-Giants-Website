@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Jungle Giants</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Jungle Giants- CIS Spring Gam Jam 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -13,14 +13,13 @@
 <body>
 
     <!-- ─── NAVIGATION ─── -->
-    <nav>
+    <nav id = "nav">
     <a href="#" class="nav-logo">🌿 Jungle Giants</a>
     <ul class="nav-links">
-        <li><a href="#story">Story</a></li>
-        <li><a href="#gameplay">Gameplay</a></li>
-        <li><a href="#characters">Characters</a></li>
-        <li><a href="#hearttree">Heart Tree</a></li>
-        <li><a href="#assets">Assets</a></li>
+      <li><a href="#theme">Theme</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#characters">Characters</a></li>
+      <li><a href="#assets">Assets</a></li>
     </ul>
     </nav>
   
@@ -114,15 +113,60 @@
 
               <!-- Content -->
               <div class="hero-content">
-                <p class="hero-eyebrow">A 2-Player Jungle Adventure</p>
+                <p class="hero-eyebrow">A 2-Player Jungle Survival Game</p>
                 <h1 class="hero-title">
                   <span>Jungle</span>
                   Giants
                 </h1>
-                <p class="hero-subtitle">Two young monkeys. One ancient jungle. And a wall of fire that never sleeps.</p>
-                <a href="#story" class="hero-cta">Begin the Journey</a>
+                <p class="hero-subtitle">Two young monkeys. One ancient jungle. A wall of fire that never sleeps and the unshakeable truth that no one survives alone.</p>
+                <div class="hero-actions">
+                  <a href="#story" class="hero-cta secondary">Read the Story</a>
+                </div>
               </div>
         </section>
+        <section id="theme" class="theme-section">
+          <div class="section">
+            <p class="section-eyebrow reveal">This Year's Theme</p>
+            <h2 class="section-title reveal">Better Together</h2>
+            <div class="theme-grid">
+              <div class="theme-text reveal">
+                <p>For this years CIS Spring Game Jam 2026, we had to build something around the idea of "Better Together". This prompt brought teamwork and creativity together, that became into a game.</p>
+                <p>In Jungle Giants, one monkey cannot make it far alone. The branches are too spread out, the obstacles too sudden, the fire too fast. But two monkeys working together and timing their swings can go further than either ever could solo.</p>
+                <p>We did this on purpuse. It is incorporated into every piece of the level design, the physics, and the controls. The game is harder alone because the jungle was built for two.</p>
+              </div>
+              <div class="theme-pillars reveal" style="transition-delay:0.2s">
+                <div class="pillar">
+                  <div>
+                    <strong>Shared Controls</strong>
+                    <p>Player 1 uses W, Player 2 uses ↑(up arrow). Your timing affects each other, a well-placed swing can open a path for your partner.</p>
+                  </div>
+                </div>
+                <div class="pillar">
+     
+                  <div>
+                    <strong>Dynamic Camera</strong>
+                    <p>The camera zooms out to keep both players in frame. Stray too far apart and the view shifts, so stay close.</p>
+                  </div>
+                </div>
+                <div class="pillar">
+                
+                  <div>
+                    <strong>One Shared Threat</strong>
+                    <p>The fire wall doesn't chase one player — it chases both. If one falls behind, you both lose.</p>
+                  </div>
+                </div>
+                <div class="pillar">
+                  
+                  <div>
+                    <strong>One Shared Score</strong>
+                    <p>Distance is measured by the furthest player. You're only as good as how well you work together.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
 
    <!-- STORY -->
    <section id="story" class="story-section">
@@ -132,17 +176,17 @@
         <div class="story-card reveal">
           <span class="icon">🌞</span>
           <h3>A Peaceful Morning</h3>
-          <p>--</p>
+          <p>The jungle starts off calm and quiet. The sunlight shines through the trees while the monkeys swing freely from branch to branch way above the forest floor. Everything is peaceful, and the jungle is full of life. But far in the distance, danger is starting to grow. </p>
         </div>
         <div class="story-card reveal" style="transition-delay: 0.15s">
           <span class="icon">🪚</span>
           <h3>Uh Oh...</h3>
-          <p>---</p>
+          <p>The calm jungle becomes a place of danger. Smoke surrounds them as a huge wall of flames breaks out into the jungle, leaving a trail of destruction behind it. Branches are becoming harder to grasp, objects get in the way, and the water level increases rapidly. The monkeys soon understand that their only chance is to keep going.</p>
         </div>
         <div class="story-card reveal" style="transition-delay: 0.3s">
           <span class="icon">🌳</span>
           <h3>The Mission Begins</h3>
-          <p>----</p>
+          <p>Suddenly, the flames break out from deep inside the forest, spreading quickly and burning everything in their way. The monkeys have to flee before the fire consumes them. Moving from one branch to another, dodging all the obstacles in their way, they dash through the crumbling forest with rising flood waters beneath them.</p>
         </div>
       </div>
     </div>
@@ -155,54 +199,109 @@
       <h2 class="section-title reveal">How It Works</h2>
       <div class="features-grid">
         <div class="feat reveal">
-          <span class="feat-icon">🌱</span>
+          <span class="feat-icon"></span>
           <h4>P5.js</h4>
-          <p>Coded with P5.js</p>
+          <p>We coded the whole game on p5.js, a JavaScript library. </p>
         </div>
         <div class="feat reveal" style="transition-delay: 0.1s">
-          <span class="feat-icon">🗺️</span>
+          <span class="feat-icon"></span>
           <h4>Sprites</h4>
-          <p>We used sprites</p>
+          <p>The art was found on the internet from copyright free assets. </p>
         </div>
         <div class="feat reveal" style="transition-delay: 0.2s">
-          <span class="feat-icon">💨</span>
+          <span class="feat-icon"></span>
           <h4>Outrun the Haze</h4>
-          <p>The smoggy air is spreading. Move fast, think smart, and keep the forest one step ahead of destruction.</p>
+          <p>The fire will never stop, it gets faster the longer you survive. So keep moving or you're done. </p>
         </div>
         <div class="feat reveal" style="transition-delay: 0.3s">
-          <span class="feat-icon">🌟</span>
-          <h4>Awaken the Heart Tree</h4>
-          <p>Reach the oldest tree in the jungle — the Heart Tree — and awaken its ancient power to heal everything.</p>
+          <span class="feat-icon"></span>
+          <h4>Stay in Frame</h4>
+          <p>The camera zooms out to keep both players visible. Drift too far apart and things get messy fast.</p>
         </div>
       </div>
     </div>
   </div>
-
     <!-- CHARACTERS -->
     <section class="chars-section">
         <div class="section">
-          <h2 class="section-title reveal">Meet the Heroes</h2>
+          <h2 class="section-title reveal">Meet the Moneys!</h2>
           <div class="chars-row">
             <div class="char-card reveal">
-              <span class="tbd-tag">Name TBD </span>
+           
               <span class="char-emoji">🐒</span>
               <div class="char-name">Monkey #1</div>
               <p class="char-desc">Brave, bold, and definitely the one who runs headfirst into trouble. Probably the leader. Probably.</p>
             </div>
             <div class="char-card reveal" style="transition-delay: 0.2s">
-              <span class="tbd-tag">Name TBD </span>
+
               <span class="char-emoji">🐒</span>
               <div class="char-name">Monkey #2</div>
               <p class="char-desc">The brains of the operation. Knows where all the best seeds are hidden. Slightly less reckless than #1.</p>
             </div>
           </div>
-          <p class="chars-footnote reveal" style="transition-delay: 0.3s">
-            * Names, personalities, and exact number of bananas consumed are still being decided.
-          </p>
         </div>
       </section>
 
-    <!-- Link JavaScript File -->
-    <script src="script.js"></script>
+ 
+  <!-- ─── ASSETS ─── -->
+  <section id="assets" class="assets-section">
+    <div class="section">
+      <h2 class="section-title reveal">Asset Log</h2>
+      <p class="assets-note reveal">All assets used in Jungle Giants are either original creations or sourced from copyright-free libraries.</p>
+      <table class="assets-table reveal">
+        <thead>
+          <tr>
+            <th>Asset</th>
+            <th>Type</th>
+            <th>Credit / Source</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>monkey.png</strong><br>Player sprite</td>
+            <td>Image</td>
+            <td>Found by Tej and Nate</td>
+            <td><span class="badge badge-original">Original</span></td>
+          </tr>
+          <tr>
+            <td><strong>tree.png</strong><br>Background</td>
+            <td>Image</td>
+            <td>Found by Tej and Nate</td>
+            <td><span class="badge badge-original">Original</span></td>
+          </tr>
+          <tr>
+            <td><strong>fire.png</strong><br>Death wall sprite</td>
+            <td>Image</td>
+            <td>Found by Tej and Nate</td>
+            <td><span class="badge badge-original">Original</span></td>
+          </tr>
+          <tr>
+            <td><strong>p5.js</strong><br>Game engine / library</td>
+            <td>Code Library</td>
+            <td><a href="https://p5js.org" target="_blank">p5js.org</a> — open source (LGPL 2.1)</td>
+            <td><span class="badge badge-free">Open Source</span></td>
+          </tr>
+          <tr>
+            <td><strong>Cinzel / Lora</strong><br>Website fonts</td>
+            <td>Font</td>
+            <td><a href="https://fonts.google.com" target="_blank">Google Fonts</a> — SIL Open Font License</td>
+            <td><span class="badge badge-free">Open Source</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+ 
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="footer-logo">🌿 Jungle Giants</div>
+    <p class="footer-note">
+      Made for the <strong>CIS Spring Game Jam 2026</strong>    Theme: <em>Better Together</em><br>
+      
+    </p>
+  </footer>
+ 
+  <script src="script.js"></script>
 </body>
 </html>
