@@ -14,7 +14,7 @@
 
     <!-- ─── NAVIGATION ─── -->
     <nav>
-    <a href="#" class="nav-logo">🌿 Jungle Giants</a>
+    <a href="#" class="nav-logo">Jungle Giants</a>
     <ul class="nav-links">
         <li><a href="#story">Story</a></li>
         <li><a href="#gameplay">Gameplay</a></li>
@@ -124,29 +124,90 @@
               </div>
         </section>
 
-   <!-- STORY -->
-   <section id="story" class="story-section">
-    <div class="section">
-      <h2 class="section-title reveal">📖 The Story So Far...</h2>
-      <div class="story-grid">
-        <div class="story-card reveal">
-          <span class="icon">🌞</span>
-          <h3>A Peaceful Morning</h3>
-          <p>--</p>
-        </div>
-        <div class="story-card reveal" style="transition-delay: 0.15s">
-          <span class="icon">🪚</span>
-          <h3>Uh Oh...</h3>
-          <p>---</p>
-        </div>
-        <div class="story-card reveal" style="transition-delay: 0.3s">
-          <span class="icon">🌳</span>
-          <h3>The Mission Begins</h3>
-          <p>----</p>
-        </div>
+    <!-- ─── GENRE QUICK TAGS ─── -->
+    <div class="genre-section" id="genre">
+      <div class="section-label" style="margin-bottom:1.5rem">Genre</div>
+      <div>
+        <span class="genre-tag">Endless Runner</span>
+        <span class="genre-tag">Co-op</span>
+        <span class="genre-tag">Platformer</span>
+        <span class="genre-tag">Survival</span>
+        <span class="genre-tag">1–2 Players</span>
       </div>
     </div>
-  </section>
+
+    <!-- ─── STORY ─── -->
+    <section class="story-section" id="story">
+      <div class="section-inner">
+        <p class="section-label reveal">Origin Story</p>
+        <h2 class="section-title reveal">The Jungle Awakens</h2>
+
+        <div class="divider reveal">
+          <div class="divider-line"></div>
+          <span class="divider-leaf">🌿</span>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="story-grid">
+          <div class="story-text reveal">
+            <p>In the heart of a <em>thriving, luscious jungle</em>, two young monkeys lived among ancient trees that touched the clouds. The canopy hummed with life — birds, insects, the drip of morning dew on broad leaves.</p>
+            <p>One morning, they woke to a smell they had never known. Smoke. The horizon burned orange and red where it had always glowed green. A <em>forest fire</em> had begun, and it was hungry.</p>
+            <p>But the jungle holds old magic. Scattered across the land lie <em>ancient seeds</em> — if planted in scorched earth, they can bring the forest back from ash. And at the heart of everything stands the <em>Heart Tree</em>, the oldest living being in the world.</p>
+            <p>Awaken it, and the jungle will heal. But first — <em>run.</em></p>
+          </div>
+
+          <div class="story-visual reveal reveal-delay-2">
+            <svg viewBox="0 0 340 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+              <defs>
+                <radialGradient id="treeGlow" cx="50%" cy="60%" r="40%">
+                  <stop offset="0%" stop-color="#639922" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="transparent"/>
+                </radialGradient>
+              </defs>
+              <!-- Background glow -->
+              <ellipse cx="170" cy="200" rx="160" ry="170" fill="url(#treeGlow)"/>
+
+              <!-- Ground -->
+              <ellipse cx="170" cy="320" rx="130" ry="18" fill="#173404" opacity="0.8"/>
+
+              <!-- Tree trunk -->
+              <rect x="148" y="200" width="44" height="130" rx="6" fill="#5a3e28"/>
+              <rect x="155" y="220" width="6" height="100" fill="#3e2a1a" opacity="0.5"/>
+              <rect x="179" y="220" width="4" height="110" fill="#3e2a1a" opacity="0.3"/>
+
+              <!-- Roots -->
+              <path d="M148,310 Q130,330 110,320" stroke="#5a3e28" stroke-width="8" fill="none" stroke-linecap="round"/>
+              <path d="M192,315 Q210,335 230,322" stroke="#5a3e28" stroke-width="7" fill="none" stroke-linecap="round"/>
+              <path d="M162,318 Q158,340 148,340" stroke="#5a3e28" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+              <!-- Branches -->
+              <path d="M170,210 Q120,160 80,140" stroke="#5a3e28" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <path d="M170,210 Q220,150 265,130" stroke="#5a3e28" stroke-width="9" fill="none" stroke-linecap="round"/>
+              <path d="M170,230 Q140,190 110,175" stroke="#5a3e28" stroke-width="7" fill="none" stroke-linecap="round"/>
+              <path d="M170,230 Q205,185 240,170" stroke="#5a3e28" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+              <!-- Main canopy layers -->
+              <ellipse cx="170" cy="140" rx="95" ry="70" fill="#3B6D11"/>
+              <ellipse cx="100" cy="145" rx="60" ry="48" fill="#2d5e0d"/>
+              <ellipse cx="245" cy="140" rx="58" ry="45" fill="#2d5e0d"/>
+              <ellipse cx="170" cy="100" rx="75" ry="58" fill="#3B6D11"/>
+              <ellipse cx="170" cy="70" rx="55" ry="45" fill="#27500a"/>
+              <ellipse cx="130" cy="90" rx="45" ry="38" fill="#3B6D11"/>
+              <ellipse cx="215" cy="85" rx="42" ry="36" fill="#3B6D11"/>
+              <ellipse cx="170" cy="45" rx="38" ry="32" fill="#639922"/>
+
+              <!-- Light dapples on canopy -->
+              <circle cx="155" cy="80" r="4" fill="#C0DD97" opacity="0.4"/>
+              <circle cx="195" cy="60" r="3" fill="#C0DD97" opacity="0.3"/>
+              <circle cx="130" cy="100" r="3" fill="#97C459" opacity="0.3"/>
+
+              <!-- Fire glow at base hinting -->
+              <ellipse cx="170" cy="340" rx="130" ry="14" fill="#D85A30" opacity="0.15"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
 
   <div class="leaf-divider"></div>
   <!-- FEATURES -->
